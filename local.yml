@@ -4,6 +4,8 @@
   become: yes
   
   tasks:
+  - name: run yum update
+    command: yum update -y
   - name: install vim locate and htop with yum  
     yum: name={{ item }} state=present
     with_items:
