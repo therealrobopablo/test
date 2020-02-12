@@ -1,0 +1,9 @@
+---
+- name: Install vim, locate and htop
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+   - vim
+   - mlocate
+   - htop
