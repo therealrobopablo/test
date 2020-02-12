@@ -5,9 +5,9 @@
   
   tasks:
   - name: run yum update
-    command: yum update -y
+    yum: name="*" state=latest
   - name: install vim locate and htop with yum  
-    yum: name={{ item }} state=present
+    yum: name={{ item }} state=latest
     with_items:
     - vim
     - mlocate
