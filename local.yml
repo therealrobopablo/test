@@ -1,6 +1,7 @@
 ---
 - name: Install vim, locate and htop
   hosts: localhost
+  become: yes
   
   tasks:
   - name: install vim locate and htop with yum  
