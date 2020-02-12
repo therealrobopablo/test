@@ -6,7 +6,7 @@
   tasks:
   - name: run yum update
     yum:
-    name: *
+    name: "*"
     state: latest
     skip_broken: yes
   - name: install vim locate and htop with yum  
