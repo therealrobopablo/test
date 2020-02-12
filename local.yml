@@ -1,9 +1,11 @@
 ---
 - name: Install vim, locate and htop
-  yum:
-    name: "{{ item }}"
-    state: present
-  with_items:
-   - vim
-   - mlocate
-   - htop
+  hosts: localhost
+  
+  tasks:
+  - name: install vim locate and htop with yum  
+    yum: name={{ item }} state=present
+    with_items:
+    - vim
+    - mlocate
+    - htop
