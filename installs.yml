@@ -1,0 +1,22 @@
+---
+ - name: git update
+    yum:
+    name: git
+    state: latest
+  
+ - name: install vim and mlocate and htop
+    yum:
+    name:
+    - vim
+    - mlocate
+    - htop
+    state: latest
+    notify: updatedb
+    
+  - name: yum cleanup
+    yum:
+    autoremove: yes
+  
+  handlers:
+    name: updatedb
+    shell: updatedb
