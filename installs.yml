@@ -1,12 +1,8 @@
 ---
- - name: git update
-    yum:
-    name: git
-    state: latest
-  
- - name: install vim and mlocate and htop
+   - name: install vim and mlocate and htop
     yum:
     name:
+    - git
     - vim
     - mlocate
     - htop
