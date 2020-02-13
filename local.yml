@@ -23,4 +23,4 @@
    - name: update locate db
      shell: updatedb
    -name: run yum update
-    shell: yum update --skip-broken -y
+   shell: yum update --skip-broken -y
