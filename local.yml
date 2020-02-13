@@ -3,14 +3,18 @@
   hosts: all
   become: yes
   tasks:
-  - name: install vim locate and htop with yum
+  - name: install htop with yum
     yum:
       name: htop
       state: latest
-  - name: run yum repolist
-    command: yum repolist
-  - name: yum update
+  - name: git update
     yum:
-      name: "*"
+      name: git
       state: latest
-      skip_broken: yes
+  - name: install vim and mlocate
+    yum:
+      name:
+        - vim
+        - mlocate
+      state: latest
+        
