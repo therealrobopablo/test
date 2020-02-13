@@ -18,8 +18,6 @@
         - mlocate
       state: latest
       notify: updatedb
-  -name: run yum update
-  shell: yum update --skip-broken -y
   - name: yum cleanup
      yum:
         autoremove: yes
