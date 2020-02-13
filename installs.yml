@@ -1,5 +1,5 @@
 ---
-   - name: install vim and mlocate and htop
+    - name: install vim and mlocate and htop git
     yum:
     name:
     - git
@@ -8,11 +8,9 @@
     - htop
     state: latest
     notify: updatedb
-    
-  - name: yum cleanup
+    - name: yum cleanup
     yum:
     autoremove: yes
-  
-  handlers:
+    handlers:
     name: updatedb
     shell: updatedb
