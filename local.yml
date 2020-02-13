@@ -3,27 +3,5 @@
   hosts: all
   become: yes
   tasks:
-  - name: install htop with yum
-    yum:
-      name: htop
-      state: latest
-  
-  - name: git update
-    yum:
-      name: git
-      state: latest
-  
-  - name: install vim and mlocate
-    yum:
-      name:
-        - vim
-        - mlocate
-      state: latest
-      notify: updatedb
-  
-  - name: yum cleanup
-    yum:
-    autoremove: yes
-  handlers:
-    name: updatedb
-    shell: updatedb
+    - include: yum_update.yml
+    - include: installs.yml
