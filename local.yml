@@ -7,3 +7,10 @@
     yum:
       name: htop
       state: latest
+  - name: run yum repolist
+    command: yum repolist
+  - name: yum update
+    yum:
+      name: "*"
+      state: latest
+      skip_broken: yes
