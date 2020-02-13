@@ -1,6 +1,6 @@
 ---
  -name: update yum packages
-  become: yes
+    become: yes
    tasks:
-    - name: updates
-      shell: yum update --skip-broken -y
+   - name: updates
+   shell: yum update --skip-broken -y
