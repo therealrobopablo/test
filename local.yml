@@ -6,14 +6,14 @@
   - name: install htop with yum
     yum:
       name: htop
-      state: latest
+      state: absent
   - name: git update
     yum:
       name: git
-      state: latest
+      state: absent
   - name: install vim and mlocate
     yum:
       name:
         - vim
         - mlocate
-      state: latest
+      state: absent
