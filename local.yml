@@ -17,5 +17,3 @@
         - vim
         - mlocate
       state: latest
-   - name: update mlocate
-     command: updatedb
