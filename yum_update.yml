@@ -1,9 +1,8 @@
 ---
--name: update yum packages
-  hosts: all
-  become: yes
-  
-  tasks:
-  
-  - name: updates
-    shell: yum update --skip-broken -y
+  -name: update yum packages
+    hosts: all
+    become: yes
+    
+    tasks:
+      - name: updates
+      shell: yum update --skip-broken -y
