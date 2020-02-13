@@ -17,10 +17,10 @@
         - vim
         - mlocate
       state: latest
-   - name: yum cleanup
-     yum:
-        autoremove: yes
    - name: update locate db
      shell: updatedb
    -name: run yum update
    shell: yum update --skip-broken -y
+   - name: yum cleanup
+     yum:
+        autoremove: yes
