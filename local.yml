@@ -1,15 +1,9 @@
 ---
-- name: run yum update
+- name: install vim locate and htop with yum
   yum:
-   name: "*"
-   state: latest
-   skip_broken: yes
-   become: yes
-   
- - name: install vim locate and htop with yum  
-   yum:
     name: "{{ item }}"
     state: latest
+    become: yes
      with_items:
      - vim
      - mlocate
