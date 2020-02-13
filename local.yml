@@ -21,6 +21,7 @@
   - name: yum cleanup
   yum:
   autoremove: yes
-handlers:
-  name: updatedb
+  
+  handlers:
+    name: updatedb
     shell: updatedb
