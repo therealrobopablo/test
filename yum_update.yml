@@ -1,6 +1,6 @@
 ---
   -name: update yum packages
-   hosts: all
+   #hosts: all
    become: yes
    tasks:
     - name: updates
