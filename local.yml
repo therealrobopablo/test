@@ -1,8 +1,9 @@
 ---
-- hosts: all
+- name: yum update and install
+  hosts: all
+  become: yes
   tasks:
   - name: install vim locate and htop with yum
     yum:
-    name: htop
-    state: latest
-    become: yes
+      name: htop
+      state: latest
