@@ -9,7 +9,8 @@ tasks:
     - mlocate
     - htop
     state: latest
-    notify: updatedb- name: yum cleanup
+    notify: updatedb
+  - name: yum cleanup
     yum:
     autoremove: yes
 handlers:
