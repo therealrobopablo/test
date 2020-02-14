@@ -1,9 +1,7 @@
 ---
-  -name: installs
-   become: yes
 tasks:
-- name: install vim and mlocate and htop git
-  yum:
+  - name: install vim and mlocate and htop git
+    yum:
     name: "{{items}}"
     with_items:
     - git
@@ -11,10 +9,9 @@ tasks:
     - mlocate
     - htop
     state: latest
-    notify: updatedb
-- name: yum cleanup
-  yum:
+    notify: updatedb- name: yum cleanup
+    yum:
     autoremove: yes
 handlers:
-    - name: updatedb
-      shell: updatedb
+  - name: updatedb
+    shell: updatedb
