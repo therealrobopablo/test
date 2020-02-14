@@ -1,4 +1,5 @@
 ---
+become: yes
 - name: install vim and mlocate and htop git
   yum:
     name:
@@ -8,8 +9,6 @@
         - mlocate
         - htop
     state: latest
-    become: yes
 - name: yum cleanup
   yum:
     autoremove: yes
-    become: yes
