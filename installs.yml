@@ -1,4 +1,5 @@
 ---
+  name: installs
   tasks:
     - name: install vim and mlocate and htop git
       yum:
