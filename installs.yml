@@ -1,7 +1,7 @@
 ---
-name: installs
-hosts: local
-become: yes
+  name: installs
+  hosts: local
+  become: yes
 tasks:
 - name: install vim and mlocate and htop git
   yum:
