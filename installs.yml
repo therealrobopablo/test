@@ -4,7 +4,7 @@ hosts: local
 become: yes
 tasks:
 - name: install vim and mlocate and htop git
-    yum:
+  yum:
     name: "{{items}}"
     with_items:
     - git
@@ -14,8 +14,8 @@ tasks:
     state: latest
     notify: updatedb
 - name: yum cleanup
-    yum:
+  yum:
     autoremove: yes
-    handlers:
-    name: updatedb
-    shell: updatedb
+ handlers:
+    - name: updatedb
+        shell: updatedb
