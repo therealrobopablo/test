@@ -1,6 +1,6 @@
 ---
 - name: yum update and install
-  hosts: all
+  hosts: localhost
   become: yes
   tasks:
     - include: yum_update.yml
