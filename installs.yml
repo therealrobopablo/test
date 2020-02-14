@@ -8,10 +8,6 @@
     - mlocate
     - htop
     state: latest
-    notify: updatedb
   - name: yum cleanup
     yum:
     autoremove: yes
-handlers:
-  - name: updatedb
-    shell: updatedb
