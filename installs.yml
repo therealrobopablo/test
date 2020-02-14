@@ -1,6 +1,6 @@
 ---
-  - name: install vim and mlocate and htop git
-    yum:
+- name: install vim and mlocate and htop git
+  yum:
     name:
       items:
         - git
