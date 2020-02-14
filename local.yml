@@ -3,5 +3,7 @@
   hosts: localhost
   become: yes
   tasks:
-    - include: yum_update.yml
-    - include: installs.yml
+    - name: yum update
+      include: yum_update.yml
+    - name: install packages
+      include: installs.yml
