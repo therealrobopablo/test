@@ -8,6 +8,6 @@
         - mlocate
         - htop
     state: latest
-  - name: yum cleanup
-    yum:
-      autoremove: yes
+- name: yum cleanup
+  yum:
+    autoremove: yes
