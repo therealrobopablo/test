@@ -1,16 +1,16 @@
 ---
-tasks:
-- name: install vim and mlocate and htop git
-  yum:
-    name:
-      items:
-        - git
-        - vim
-        - mlocate
-        - htop
-    state: latest
-    become: yes
-- name: yum cleanup
-  yum:
-    autoremove: yes
-    become: yes
+  tasks:
+    - name: install vim and mlocate and htop git
+      yum:
+        name:
+          items:
+            - git
+            - vim
+            - mlocate
+            - htop
+        state: latest
+        become: yes
+     - name: yum cleanup
+       yum:
+         autoremove: yes
+         become: yes
