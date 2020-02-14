@@ -18,4 +18,4 @@ tasks:
     autoremove: yes
 handlers:
     - name: updatedb
-        shell: updatedb
+      shell: updatedb
