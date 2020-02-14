@@ -1,13 +1,16 @@
 ---
- - name: install vim and mlocate and htop git
+
+  - name: installs
+    tasks:
+    - name: install vim and mlocate and htop git
     yum:
-        name:
-            - git
-            - vim
-            - mlocate
-            - htop
-        state: latest
-        notify: updatedb
+    name:
+    - git
+    - vim
+    - mlocate
+    - htop
+    state: latest
+    notify: updatedb
  - name: yum cleanup
     yum:
     autoremove: yes
