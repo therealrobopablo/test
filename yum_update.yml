@@ -1,4 +1,6 @@
 ---
 name: update yum packages
-  shell: yum update --skip-broken -y
+  yum:
+    name: "*"
+    state: latest
   become: yes
