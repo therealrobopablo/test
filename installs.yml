@@ -10,7 +10,7 @@
             - htop
         state: latest
         become: yes
-     - name: yum cleanup
+    - name: yum cleanup
        yum:
          autoremove: yes
          become: yes
