@@ -10,6 +10,6 @@
     state: latest
     become: yes
 - name: yum cleanup
-    yum:
-      autoremove: yes
-      become: yes
+  yum:
+    autoremove: yes
+    become: yes
