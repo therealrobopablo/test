@@ -3,10 +3,10 @@
     yum:
       name: "{{items}}"
         with_items:
-          - git
-          - vim
-          - mlocate
-          - htop
+        - git
+        - vim
+        - mlocate
+        - htop
         state: latest
   - name: yum cleanup
     yum:
