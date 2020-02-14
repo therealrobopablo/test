@@ -1,5 +1,4 @@
 ---
-name: update packages
-  - name: update yum packages
-    shell: yum update --skip-broken -y
-    become: yes
+name: update yum packages
+  shell: yum update --skip-broken -y
+  become: yes
