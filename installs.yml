@@ -7,6 +7,3 @@
       - htop
       - git
     state: latest
-- name: yum cleanup
-  yum:
-    autoremove: yes
