@@ -1,12 +1,11 @@
 ---
 - name: install vim and mlocate and htop git
   yum:
-    name: "{{items}}"
-      items: 
-        - git
-        - vim
-        - mlocate
-        - htop
+    name:
+      - vim
+      - mlocate
+      - htop
+      - git
     state: latest
     become: yes
 - name: yum cleanup
