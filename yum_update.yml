@@ -1,6 +1,8 @@
 ---
-- name: update yum packages
+name: update yum packages
+yum:
+  name: "*"
+  state: latest
+- name: yum cleanup
   yum:
-    name: "*"
-    state: latest
-  become: yes
+  autoremove: yes
