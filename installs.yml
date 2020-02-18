@@ -1,8 +1,8 @@
 ---
 - name: install vim and mlocate and htop git
   yum:
-    name:
-      items:
+    name: "{{ item }}"
+      item:
         - git
         - vim
         - mlocate
