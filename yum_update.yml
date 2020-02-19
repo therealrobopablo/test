@@ -1,9 +1,9 @@
 ---
 tasks:
--name: update yum packages
+- name: update yum packages
   yum:
-  name: "*"
-  state: latest
--name: yum cleanup
+    name: "*"
+    state: latest
+- name: yum cleanup
   yum:
-  autoremove: yes
+    autoremove: yes
