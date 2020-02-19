@@ -5,5 +5,5 @@
   tasks:
     - name: yum update
       include: yum_update.yml
-    #- name: install packages
-      #include: installs.yml
+    - name: install packages
+      include: installs.yml
