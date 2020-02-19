@@ -7,7 +7,7 @@
       - htop
       - git
       - epel-release
-    state: absent
+    state: present
 - name: copy a file
   copy:
     src: test_file.j2
