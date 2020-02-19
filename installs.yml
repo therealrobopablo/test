@@ -1,6 +1,4 @@
 ---
-- name: yum repolist
-  command: yum repolist
 - name: install vim and mlocate and htop git
   yum:
     name:
