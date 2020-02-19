@@ -3,7 +3,7 @@
   hosts: all
   become: yes
   tasks:
-    #- name: yum update
-      #include: yum_update.yml
+    - name: yum update
+      include: yum_update.yml
     - name: install packages
       include: installs.yml
