@@ -10,10 +10,10 @@
       - git
       - epel-release
     state: absent
- - name: copy a file
-   copy:
-     src: test_file.j2
-     dest: /tmp/test.copy
- - name: cat the file
-   command: cat /tmp/test.copy
+- name: copy a file
+  copy:
+    src: test_file.j2
+    dest: /tmp/test.copy
+- name: cat the file
+  command: cat /tmp/test.copy
  
