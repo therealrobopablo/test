@@ -6,4 +6,5 @@
       - mlocate
       - htop
       - git
+      - epel-release
     state: latest
