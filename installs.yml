@@ -12,8 +12,6 @@
   copy:
     src: test_file.j2
     dest: /tmp/test.file
-    when: /tmp/test.copy == false
 - name: cat the file
   command: cat /tmp/test.copy
-  when: /tmp/test.copy == true
  
